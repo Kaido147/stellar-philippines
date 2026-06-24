@@ -1,0 +1,16 @@
+.site-logo {
+  display: block;
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.site-logo--footer {
+  height: 32px;
+}
+
+@media (max-width: 480px) {
+  .site-logo {
+    height: 28px;
+  }
+}

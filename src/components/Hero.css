@@ -1,0 +1,127 @@
+.hero {
+  position: relative;
+  padding: clamp(64px, 8vw, 100px) 0 clamp(72px, 10vw, 120px);
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+}
+
+.hero-blob-1 {
+  width: min(55vw, 700px);
+  height: min(55vw, 700px);
+  background: var(--sds-clr-lilac-04);
+  top: -15%;
+  right: -5%;
+}
+
+.hero-blob-2 {
+  width: min(40vw, 500px);
+  height: min(40vw, 500px);
+  background: var(--sds-clr-gold-09);
+  opacity: 0.25;
+  bottom: -10%;
+  left: -5%;
+}
+
+.hero-blob-3 {
+  width: min(35vw, 420px);
+  height: min(35vw, 420px);
+  background: var(--sds-clr-mint-09);
+  opacity: 0.3;
+  top: 30%;
+  left: 40%;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sds-clr-lilac-11);
+  background: var(--sds-clr-lilac-03);
+  border: 1px solid var(--sds-clr-lilac-05);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 28px;
+}
+
+.hero-title {
+  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--sds-clr-gray-12);
+  margin-bottom: 24px;
+}
+
+.hero-rotate {
+  display: inline-block;
+  color: var(--sds-clr-lilac-09);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.hero-rotate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-desc {
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  color: var(--sds-clr-gray-11);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 640px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--sds-clr-gray-11);
+  background: var(--sds-clr-gray-02);
+  border: 1px solid var(--sds-clr-gray-04);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 56px 0 72px;
+  }
+}

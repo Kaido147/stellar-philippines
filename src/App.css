@@ -1,0 +1,21 @@
+.main-content {
+  min-width: 0;
+  width: 100%;
+  min-height: calc(100vh - var(--header-height) - 200px);
+}
+
+.tab-panel {
+  animation: tabFadeIn 0.25s ease;
+  width: 100%;
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
